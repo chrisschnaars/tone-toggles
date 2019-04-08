@@ -1,0 +1,178 @@
+/**************************************
+GLOBAL PADDING FOR CORE LAYOUT
+**************************************/
+
+#main-container, #top-bar, #control-bar, #about-modal {
+  @include horizontal-layout-padding;
+}
+
+/**************************************
+MAIN INTERACTION AREA
+**************************************/
+
+#main-container {
+  // LAYOUT
+  height: calc(100vh - #{$top-bar-height} - #{$control-bar-height});
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(space-between);
+  @include align-items(center);
+  // SMALLEST SCREENS
+  @include bp1 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    @include flex-flow(column nowrap);
+  }
+}
+
+/**************************************
+TOP BAR AND CONTROLS
+**************************************/
+
+// SHARED STYLES
+#top-bar, #control-bar {
+  // LAYOUT
+  @include flexbox;
+  @include flex-flow(column nowrap);
+  @include justify-content(center);
+}
+
+// CONTAINER FOR ALL CONTROL ELEMENTS
+#top-container, #controls-container {
+  // LAYOUT
+  width: 100%;
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(space-between);
+}
+
+// TOP BAR
+#top-bar {
+  // LAYOUT
+  height: $top-bar-height;
+  // APPEARANCE
+  border-bottom: 1px solid $gray-2;
+}
+
+// CONTROL BAR
+#control-bar {
+  // LAYOUT
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: $control-bar-height;
+  // APPERANCE
+  border-top: 1px solid $gray-3;
+}
+
+// MAX WIDTH FOR CONTROLS CONTAINER
+#controls-container {
+  // LAYOUT
+  margin: 0 auto;
+  max-width: $controls-max-width;
+  max-height: $controls-max-height;
+}
+
+/**************************************
+INDIVIDUAL CONTROL ELEMENT CONTAINERS
+**************************************/
+
+// GLOBAL STYLES FOR ALL CONTAINERS
+.btn-element, .control-element {
+  // LAYOUT
+  width: 100%;
+  margin-right: 2.5rem;
+  @include bp1 {
+    width: auto;
+    margin-right: 2rem;
+  }
+}
+
+// CONTAINER FOR PRIMARY BUTTON
+.btn-element {
+  // LAYOUT
+  max-width: $primary-btn-size;
+}
+
+// CONTAINER FOR EACH CONTROL
+.control-element {
+  &:last-child {
+    margin-right: 0;
+  }
+  // @include flex(auto);
+}
+
+/**************************************
+SPECIFIC CONTROL ELEMENTS
+**************************************/
+
+// TEMPO CONTROL
+.tempo-control {
+  @include bp1 {
+    @include flex(auto);
+  }
+}
+
+/**************************************
+MODAL
+**************************************/
+
+// FULL SCREEN MODAL STYLE
+.modal {
+  // LAYOUT
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 100;
+  opacity: 0;
+  // APPEARANCE
+  background-color: $gray-1;
+  // border: 1rem solid $primary-color;
+  visibility: hidden;
+  // BEHAVIOR
+  pointer-events: none;
+  @include transition(opacity $animate-time-fast linear);
+  @include transition(visibility $animate-time-fast linear);
+}
+
+// OPEN MODAL
+.modal.visible {
+  // APPEARANCE
+  opacity: 0.95;
+  visibility: visible;
+  // BEHAVIOR
+  pointer-events: auto;
+  @include transition(visibility $animate-time-fast linear);
+  @include transition(opacity $animate-time-fast ease-in);
+}
+
+// ABOUT CONTENT CONTAINER
+.about-content {
+  // LAYOUT
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  max-width: $content-max-width;
+}
+
+/**************************************
+GENERAL POSITIONING
+**************************************/
+
+// CENTER TEXT ON SMALLEST SCREENS
+.t-ctr-bp1 {
+  @include bp1 {
+    text-align: center;
+  }
+}
+
+// CONTENT SECTIONS
+.content-section {
+  // LAYOUT
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,50 @@
+/// ===========================================
+// TONE TOGGLES
+// ===========================================
+
+// TONE TOGGLE DEFAULT STATE
+.tone-toggle {
+ // LAYOUT
+ min-width: $spacing-unit;
+ height: 100%;
+ margin-right: $spacing-unit;
+ &:last-child {
+   margin-right: 0;
+ }
+ // FLEX CONTAINER SETTINGS
+ @include flexbox();
+ @include flex-flow(column nowrap);
+ @include justify-content(center);
+ @include align-items(center);
+ // FLEX ITEM SETTINGS
+ @include flex(1);
+ // APPERANCE
+ background-color: $gray-1;
+ @include border-radius($btn-border-radius);
+ border: 0.125rem solid $gray-3;
+ // TEXT
+ color: $gray-4;
+ // BEHAVIOR
+ transition: transform $animate-time-fast ease-in-out;
+ @include transition(all $animate-time-fast ease-in-out);
+ @include bp1 {
+   width: 100%;
+   margin-right: 0;
+   margin-bottom: 0.5rem;
+   &:last-child {
+     margin-bottom: 0;
+   }
+ }
+}
+
+// GLOBAL TOGGLE HOVER BEHAVIOR
+.tone-toggle:hover {
+  // APPEARANCE
+  cursor: pointer;
+  background-color: $gray-3;
+  border-color: $gray-3;
+  // TEXT
+  color: $white;
+  // BEHAVIOR
+  @include scale(0.985);
+}

@@ -1,0 +1,223 @@
+/*
+ ALL INTERACTIVE CONTROLS
+*/
+
+// ===========================================
+// GLOBAL SETTINGS
+// ===========================================
+
+// GLOBAL STYLE FOR ALL CONTROL BUTTONS
+input, button {
+  // LAYOUT
+  height: $controls-height;
+
+  // APPEARANCE
+  background: $gray-2;
+  font-size: $ui-type-size;
+  line-height: $ui-line-height;
+  font-family: inherit;
+}
+
+// ===========================================
+// GLOBAL BUTTON STYLE
+// ===========================================
+
+// DEFAULT BUTTON STYLES
+button {
+	// LAYOUT
+	display: inline-block;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+	margin: 0;
+
+	// APPERANCE
+  color: $black;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+  @include padding(0, 1.25);
+  @include border-radius($btn-border-radius);
+
+	// BEHAVIOR
+  // @include transition(background $animate-time-fast ease-in-out);
+}
+
+button:hover {
+  // APPEARANCE
+  cursor: pointer;
+  background-color: $gray-3;
+}
+
+button:focus {
+  background-color: $gray-3;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+// ===========================================
+// PRIMARY CONTROL BUTTON STYLES
+// ===========================================
+
+.primary-button {
+  // LAYOUT
+  height: $primary-btn-size;
+  width: $primary-btn-size;
+  // APPEARANCE
+  background-color: $primary-color;
+  @include border-radius(50%);
+  @include global-box-shadow;
+  @include padding(0, 0);
+  // BACKGROUND ICON
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: center;
+}
+
+.primary-button:hover, .primary-button:focus {
+  // APPEARANCE
+  background-color: $primary-color-dark;
+}
+
+
+// PAUSE BTN
+.pause-btn {
+  // ICON
+  background-image: url(../assets/img/pause.svg);
+}
+
+// PLAY-BTN
+.play-btn {
+  // ICON
+  background-image: url(../assets/img/play.svg);
+}
+
+// ===========================================
+// SECONDARY BUTTON
+// ===========================================
+
+.secondary-button {
+  // LAYOUT
+  width: $controls-height;
+  // APPEARANCE
+  @include border-radius(50%);
+  @include global-box-shadow;
+  @include padding(0, 0);
+}
+
+// ===========================================
+// TEXT BUTOTNS (LOOK LIKE LINKS)
+// ===========================================
+
+.text-button {
+  // LAYOUT
+	display: block;
+  height: $content-line-height;
+	// APPERANCE
+	border: none;
+  background: none;
+	text-align: left;
+  @include border-radius(0);
+  border-bottom: 1px solid $primary-color;
+  padding: 0;
+  // TEXT
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+  color: $primary-color;
+}
+
+.text-button:hover {
+  // APPEARANCE
+  cursor: pointer;
+  background-color: $white;
+  border-bottom: none;
+}
+
+.text-button:focus {
+  // APPEARANCE
+  background-color: $white;
+}
+
+// ===========================================
+// GLOBAL CLOSE BUTTON
+// ===========================================
+
+button.close-btn {
+  // LAYOUT
+  position: absolute;
+  top: 1.25rem;
+  right: 3rem;
+  // APPEARANCE
+  @include border-radius(50%);
+  @include global-box-shadow;
+  // ICON
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/close.svg);
+  background-size: 50%;
+
+  // RESPONSIVE
+  // SMALLEST SCREENS
+  @include bp1 {
+    top: 1rem;
+    right: 1rem;
+  }
+
+}
+
+// ===========================================
+// TOGGLE GROUP
+// ===========================================
+
+// TOGGLE BUTTONS BEHAVIOR
+div.toggle-group {
+	// FLEX CONTAINER STYLES
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(flex-start);
+}
+
+// TOGGLE BUTTON MODIFICATION
+button.toggle {
+  // APPEARANCE
+  @include border-radius(0);
+  &:first-child {
+    @include border-radii($btn-border-radius, 0, 0, $btn-border-radius);
+  }
+  &:last-child {
+    @include border-radii(0, $btn-border-radius, $btn-border-radius, 0);
+  }
+  // FLEX ITEM STYLES
+  @include flex(1);
+}
+
+
+// ACTIVE CLASS FOR THE SELECTED BUTTON
+button.toggle.selected {
+	background-color: $primary-color;
+	color: $white;
+}
+
+
+// ===========================================
+// SLIDER
+// ===========================================
+
+// RANGE SLIDER
+input[type=range] {
+	@include input-type-range;
+  margin: 0;
+}
+
+// GROUP FOR SLIDER LABEL AND READOUT
+.slider-info-container {
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(space-between);
+}
+
+// RGB SLIDER VALUE READOUT
+.slider-readout {
+  margin-left: $spacing-unit / 2;
+}

@@ -1,0 +1,69 @@
+/*
+ ALL INTERACTIVE CONTROLS
+*/
+
+h1 {
+  font-size: $headline-font-size;
+  line-height: $headline-line-height;
+  font-weight: $font-weight-heavy;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-weight: $font-weight-heavy;
+  line-height: $headline-line-height;
+}
+
+// CONTENT
+p {
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+  // RESPONSIVE
+  @include bp1 {
+    font-size: $content-font-size-sm;
+    line-height: $content-line-height-sm;
+  }
+}
+
+// CONTROL LABELS
+label, p.control-label, p.control-readout {
+  font-size: $ui-label-font-size;
+  line-height: $ui-label-line-height;
+  margin-bottom: 0.25rem;
+  display: block;
+  // RESPONSIVE
+  @include bp1 {
+    font-size: $ui-label-font-size-sm;
+  }
+}
+
+// CONTENT STYLES
+p.content {
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// note ON EACH TONE TOGGLE
+p.note-display {
+  // LAYOUT
+  margin: 0;
+  // APPEARANCE
+  // color: $black;
+  color: inherit;
+  font-size: $note-display-font-size;
+  line-height: $note-display-line-height;
+  font-weight: bolder;
+  // color: inherit;
+  // RESPONSIVE
+  @include bp2 {
+    font-size: $note-display-font-size-sm;
+  }
+}
+
+// GLOBAL MODIFIERS
+.heavy { font-weight: $font-weight-heavy; }
+.small { font-size:  $ui-label-font-size; }

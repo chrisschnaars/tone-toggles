@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title data-head="true">Sound Tools: Tone Toggles</title>
+    <meta name="description" content="Tone Web Experiment 01" data-head="true"/>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.ico">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div id="top-bar">
+      <div id="top-container">
+        <!-- TITLE -->
+        <p>Tone Toggles</p>
+
+        <!-- INFO BUTTON -->
+        <button id="about-modal-open" class="text-button">
+          Info
+        </button>
+      </div>
+    </div>
+
+    <!-- CONTAINER FOR TONE TOGGLES -->
+    <div id="main-container">
+    </div>
+
+    <div id="control-bar">
+
+      <!-- PLAY/PAUSE -->
+      <div id="controls-container">
+        <div class="btn-element">
+          <button id="play-toggle" class="primary-button play-btn" type="button" name="mute" aria-label="Play">
+            <!-- "Mute" -->
+          </button>
+        </div>
+
+        <!-- KEY SELECTOR -->
+        <div class="control-element">
+          <!-- CONTROL LABEL -->
+          <label class="t-ctr-bp1" for="key">Key</label>
+          <!-- TOGGLE GROUP -->
+          <div class="bp1-hidden toggle-group key-selector">
+            <button id="A" name="key" value="0" type="button" class="toggle selected">
+                A
+            </button>
+            <button id="C" name="key" value="1" type="button" class="toggle">
+                C
+            </button>
+            <button id="D" name="key" value="2" type="button" class="toggle">
+                D
+            </button>
+            <button id="E" name="key" value="3" type="button" class="toggle">
+                E
+            </button>
+            <button id="G#" name="key" value="4" type="button" class="toggle">
+                G#
+            </button>
+          </div>
+
+          <!-- MOBILE BUTTON -->
+          <button id="key-selector-mini" type="button" class="secondary-button bp1-visible" name="key" aria-label="Select Key">
+            A
+          </button>
+        </div>
+
+        <!-- TEMPO CONTROL -->
+        <div class="control-element tempo-control">
+          <div class="slider-info-container">
+            <label for="tempo" class="control-label">Tempo</label>
+            <p id="tempo-readout" class="control-readout">120</p>
+          </div>
+          <input name="tempo" id="tempo" type="range" role="slider" min="40" max="220" value="120" step="1" aria-valuemin="40" aria-valuemax="220" aria-valuenow="120" aria-labeledby="tempo">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ABOUT MODAL  -->
+    <div id="about-modal" class="modal">
+      <button id="about-modal-close" class="close-btn" type="button" name="Close" aria-label="Close">
+        <!-- "Close" -->
+      </button>
+      <div class="about-content">
+        <!-- TITLE -->
+        <div class="content-section">
+          <h1>Tone Toggles</h1>
+        </div>
+
+        <!-- HOW TO PLAY -->
+        <div class="content-section">
+          <h2>How To Play</h2>
+          <p class="content">Click or tap on the gray bars (aka "Tone Toggles") to turn them on and off. You can also use your "home row" keys (A, S, D, F, J, K, L, :) for a more keyboard-like experience.</p>
+
+          <p class="content">Each tone toggle is set to the same 8-beat rhythm. Turning one on will cause them to play to a random selection of beats. You cannot control what beat they play on, but you can change their beat selection by turning them on and off.</p>
+
+          <p class="content">Adjust the musical key and the combination of tones and savor your unique symphonic creation.</p>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="content-section">
+          <h2>About Tone Toggles</h2>
+          <p class="content">Tone Toggles is simple music generation tool intended to spur musical creativity by limiting the amount of options the musician can control.</p>
+
+          <p class="content">This was built by <a href="https://www.schnaars.xyz">Chris Schnaars</a> as part of the ongoing series of sound-generation experiments called Sound Tools. Please <a href="contact.com">get in touch</a> if you have any problems or quetsions.</p>
+        </div>
+    </div>
+
+    <!-- Load Main Script  -->
+    <script src="js/main.js" charset="utf-8"></script>
+
+  </body>
+</html>
