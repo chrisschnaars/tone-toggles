@@ -221,3 +221,14 @@ input[type=range] {
 .slider-readout {
   margin-left: $spacing-unit / 2;
 }
+
+/**************************************
+SPECIFIC CONTROL ELEMENTS
+**************************************/
+
+// TEMPO CONTROL
+.tempo-control {
+  @include bp1 {
+    @include flex(auto);
+  }
+}

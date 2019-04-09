@@ -25,9 +25,23 @@ window.onload = function() {
   setupInteraction();
   calcDelay();
 
+  // RUN ONBOARDING ANIMATION
+  onboard();
+
   // SETUP AUDIO
   setupAudioPlayback();
 };
+
+
+function onboard() {
+  for (var i=0; i<toneToggles.length; i++) {
+    (function(i){
+        setTimeout(function(){
+            toneToggles[i].animate(360);
+        }, 200 + (i * 80));
+    })(i);
+  }
+}
 
 
 /************************************************

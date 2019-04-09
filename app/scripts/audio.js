@@ -10,7 +10,8 @@ var keyFrequencies = [ 110, 130.81, 146.83, 164.81, 207.65 ];
 var keyRootNotes = [ "A", "C", "D", "E", "G#" ];
 
 // INTERVAL FOR EACH NOTE OF THE SCALE
-var scaleIntervals = [1, 5/4, 4/3, 15/8, 2, (5/4)*2,(4/3)*2, 3];
+// ROOT, THIRD, FIFTH, 1 OCTAVE, MINOR THIRD, PERF FOURTH, SEVENTH, 2 OCTAVE
+var scaleIntervals = [1, 5/4, 3/2, 2, ((6/5)*2), ((4/3)*2), ((7/4)*2), 3];
 
 // CHROMATIC
 var chromaticScale = [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
@@ -38,24 +39,27 @@ var key = keyFrequencies[0];  // root frequency
 // ]
 
 // ARRAY OF NOTES FOR EACH KEY
+// ROOT, THIRD, FIFTH, 1 OCTAVE, MINOR THIRD, PERF FOURTH, SEVENTH, 2 OCTAVE
 var scaleNotes = [
-  [ "A", "C&#9839;", "E", "G&#9839;", "A", "D", "F&#9839;", "A" ],
-  [ "C", "D", "E", "F", "G", "A", "B", "C" ],
-  [ "D", "E", "F&#9839;", "G", "A", "B", "C&#9839;", "D" ],
-  [ "E", "F&#9839;", "G&#9839;", "A", "B", "C&#9839;", "D&#9839;", "E" ],
-  [ "G&#9839;", "A&#9839;", "B&#9839;", "C&#9839;", "D&#9839;", "E&#9839;", "F", "G&#9839;" ]
+  [ "A", "C&#9839;", "E", "A", "C", "D", "G&#9839;", "A" ],
+  [ "C", "E", "G", "C", "E&#9837;", "F", "B", "C" ],
+  [ "D", "F&#9839;", "G", "D", "F", "G", "C&#9839;", "D" ],
+  [ "E", "G&#9839;", "B", "E", "G", "A", "D&#9839;", "E" ],
+  [ "G&#9839;", "B&#9839;", "D&#9839;", "G&#9839;", "B", "C&#9839;", "F", "G&#9839;" ]
 ];
 
 // COLOR OF EACH NOTE
 var scaleColors = [
   [ "A", "#DC312E" ],
   [ "A&#9839;", "#E3682F" ],
+  [ "B&#9837;", "#E3682F" ],
   [ "B", "#E6822C" ],
   [ "B&#9839;", "#F5CC00" ],
   [ "C", "#F5CC00" ],
   [ "C&#9839;", "#39E14F" ],
   [ "D", "#19CC67" ],
   [ "D&#9839;", "#1FDBCC" ],
+  [ "E&#9837;", "#1FDBCC" ],
   [ "E", "#10A3D4" ],
   [ "F", "#6700FF" ],
   [ "F&#9839;", "#A620D2" ],
@@ -161,6 +165,7 @@ function playTones() {
     if (activeBeat > numBeats) {
       activeBeat = 1;
     }
+
   });
 }
 

@@ -128,6 +128,13 @@ function ToneToggle(id) {
   this.active = false;
   this.rhythm = [];
 
+  this.animate = function(waitTime) {
+    this.active = true;
+    this.setBackground();
+    this.active=false;
+    setTimeout(this.setBackground, waitTime);
+  }
+
   // Toggle between on/off states
   this.toggle = function() {
 

@@ -52,6 +52,8 @@ TOP BAR AND CONTROLS
 #top-bar {
   // LAYOUT
   height: $top-bar-height;
+  // FLEX CONTAINER SETTINGS
+  @include align-items(center);
   // APPEARANCE
   border-bottom: 1px solid $gray-2;
 }
@@ -103,16 +105,6 @@ INDIVIDUAL CONTROL ELEMENT CONTAINERS
   // @include flex(auto);
 }
 
-/**************************************
-SPECIFIC CONTROL ELEMENTS
-**************************************/
-
-// TEMPO CONTROL
-.tempo-control {
-  @include bp1 {
-    @include flex(auto);
-  }
-}
 
 /**************************************
 MODAL
