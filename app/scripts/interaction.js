@@ -35,6 +35,13 @@ function setupInteraction() {
     if (e.key === ' ' ) {
       updatePlaying();
     }
+
+    // TABBING
+    if (e.key === 'Tab') { // the "I am a keyboard user" key
+        console.log('tab key man');
+        document.body.classList.add('user-is-tabbing');
+        // window.removeEventListener('keydown', handleFirstTab);
+    }
   }, false);
 
   // PLAY/PAUSE BUTTON
