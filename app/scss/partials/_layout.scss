@@ -84,27 +84,22 @@ INDIVIDUAL CONTROL ELEMENT CONTAINERS
 .btn-element, .control-element {
   // LAYOUT
   width: 100%;
-  margin-right: 2.5rem;
+  margin-left: 2.5rem;
   @include bp1 {
     width: auto;
-    margin-right: 2rem;
+    margin-left: 1.5rem;
+  }
+  &:first-child {
+    margin-left: 0;
   }
 }
 
-// CONTAINER FOR PRIMARY BUTTON
+// CONTAINER FOR BUTTON ELEMENTS
 .btn-element {
   // LAYOUT
-  max-width: $primary-btn-size;
+  text-align: center;
+  @include flex(0);
 }
-
-// CONTAINER FOR EACH CONTROL
-.control-element {
-  &:last-child {
-    margin-right: 0;
-  }
-  // @include flex(auto);
-}
-
 
 /**************************************
 MODAL

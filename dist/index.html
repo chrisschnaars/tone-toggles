@@ -11,10 +11,10 @@
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.ico">
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon.ico">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
@@ -87,13 +87,20 @@
           </div>
           <input name="tempo" id="tempo" type="range" role="slider" min="40" max="220" value="120" step="1" aria-valuemin="40" aria-valuemax="220" aria-valuenow="120" aria-labeledby="tempo">
         </div>
-      </div>
 
+        <!-- REFRESH NOTES -->
+        <div class="btn-element bp1-hidden">
+          <button id="refresh-btn" class="icon-button" type="button" name="refresh" aria-label="Refresh Notes">
+          </button>
+          <label for="refresh-btn" class="control-label">Refresh</label>
+        </div>
+
+      </div>
     </div>
 
     <!-- ABOUT MODAL  -->
     <div id="about-modal" class="modal">
-      <button id="about-modal-close" class="close-btn" type="button" name="Close" aria-label="Close">
+      <button id="about-modal-close" class="icon-button" type="button" name="Close" aria-label="Close">
         <!-- "Close" -->
       </button>
       <div class="about-content">

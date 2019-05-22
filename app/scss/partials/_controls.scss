@@ -16,6 +16,7 @@ input, button {
   font-size: $ui-type-size;
   line-height: $ui-line-height;
   font-family: inherit;
+  cursor: pointer;
 }
 
 // REMOVE FOCUS WHEN USER IS USING MOUSE
@@ -50,14 +51,12 @@ button {
   // @include transition(background $animate-time-fast ease-in-out);
 }
 
-button:hover {
-  // APPEARANCE
-  cursor: pointer;
-  background-color: $gray-3;
+button:hover, button:focus {
+  background-color: $gray-2;
 }
 
-button:focus {
-  background-color: $gray-3;
+button > * {
+  pointer-events: none;
 }
 
 button > * {
@@ -88,30 +87,26 @@ button > * {
   background-color: $primary-color-dark;
 }
 
-
-// PAUSE BTN
-.pause-btn {
-  // ICON
-  background-image: url(../assets/img/pause.svg);
-}
-
-// PLAY-BTN
-.play-btn {
-  // ICON
-  background-image: url(../assets/img/play.svg);
-}
-
 // ===========================================
-// SECONDARY BUTTON
+// ICON-ONLY BUTTON
 // ===========================================
 
-.secondary-button {
+.icon-button {
   // LAYOUT
   width: $controls-height;
   // APPEARANCE
   @include border-radius(50%);
   @include global-box-shadow;
   @include padding(0, 0);
+
+  // ICON
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.icon-button:active {
+  background-color: $primary-color;
 }
 
 // ===========================================
@@ -179,7 +174,7 @@ button.close-btn {
 // ===========================================
 
 // TOGGLE BUTTONS BEHAVIOR
-div.toggle-group {
+.toggle-group {
 	// FLEX CONTAINER STYLES
   @include flexbox;
   @include flex-flow(row nowrap);
@@ -187,7 +182,7 @@ div.toggle-group {
 }
 
 // TOGGLE BUTTON MODIFICATION
-button.toggle {
+.toggle {
   // APPEARANCE
   @include border-radius(0);
   &:first-child {
@@ -200,9 +195,8 @@ button.toggle {
   @include flex(1);
 }
 
-
 // ACTIVE CLASS FOR THE SELECTED BUTTON
-button.toggle.selected {
+.toggle.selected {
 	background-color: $primary-color;
 	color: $white;
 }
@@ -238,5 +232,41 @@ SPECIFIC CONTROL ELEMENTS
 .tempo-control {
   @include bp1 {
     @include flex(auto);
+  }
+}
+
+// ===========================================
+// BUTTON ICONS
+// ===========================================
+
+// PAUSE BTN
+.pause-btn {
+  background-image: url(../assets/icons/pause.svg);
+}
+
+// PLAY-BTN
+.play-btn {
+  background-image: url(../assets/icons/play.svg);
+}
+
+// REFRESH BUTTON
+#refresh-btn {
+  background-image: url(../assets/icons/refresh.svg);
+}
+
+
+#about-modal-close {
+  // LAYOUT
+  position: absolute;
+  top: 1.25rem;
+  right: 3rem;
+
+  // ICON
+  background-image: url(../assets/icons/close.svg);
+
+  // SMALLEST SCREENS
+  @include bp1 {
+    top: 1rem;
+    right: 1rem;
   }
 }

@@ -46,8 +46,8 @@ function setupInteraction() {
 
   // PLAY/PAUSE BUTTON
   document.querySelector("#play-toggle").addEventListener('click', function(e){
-    e.target.blur();
     updatePlaying();
+    e.target.blur();
   }, false);
 
   // KEY SELECTOR
@@ -71,6 +71,14 @@ function setupInteraction() {
     document.querySelector("#tempo-readout").innerHTML = this.value;
     calcDelay();
     // console.log(bpm);
+  }, false);
+
+  // REFRESH BUTTON
+  document.querySelector("#refresh-btn").addEventListener('click', function(e){
+    for (var i = 0; i < numToggles; i++) {
+      updateToggleRhythm(i);
+    }
+    e.target.blur();
   }, false);
 
   // ABOUT BUTTON - SHOW ABOUT MODAL

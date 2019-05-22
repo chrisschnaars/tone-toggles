@@ -237,7 +237,6 @@ function updatePlaying() {
   }
 }
 
-
 // UPDATE KEY
 function updateKey(k) {
   var s = window.innerWidth;
