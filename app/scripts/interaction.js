@@ -46,6 +46,7 @@ function setupInteraction() {
 
   // PLAY/PAUSE BUTTON
   document.querySelector("#play-toggle").addEventListener('click', function(e){
+    e.target.blur();
     updatePlaying();
   }, false);
 
