@@ -52,7 +52,11 @@ button {
 }
 
 button:hover, button:focus {
-  background-color: $gray-2;
+  opacity: 0.85;
+}
+
+button:active {
+  background-color: $gray-3;
 }
 
 button > * {
@@ -84,6 +88,11 @@ button > * {
 
 .primary-button:hover, .primary-button:focus {
   // APPEARANCE
+  opacity: 1;
+  // background-color: $primary-color-dark;
+}
+
+.primary-button:active {
   background-color: $primary-color-dark;
 }
 
@@ -103,10 +112,6 @@ button > * {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-}
-
-.icon-button:active {
-  background-color: $primary-color;
 }
 
 // ===========================================
@@ -134,7 +139,6 @@ button > * {
   // APPEARANCE
   cursor: pointer;
   background-color: $white;
-  border-bottom: none;
 }
 
 .text-button:focus {
@@ -199,6 +203,11 @@ button.close-btn {
 .toggle.selected {
 	background-color: $primary-color;
 	color: $white;
+  opacity: 1;
+}
+
+.toggle:active {
+  background-color: $primary-color;
 }
 
 
