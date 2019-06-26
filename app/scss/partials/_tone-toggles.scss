@@ -4,36 +4,30 @@
 
 // TONE TOGGLE DEFAULT STATE
 .tone-toggle {
- // LAYOUT
- min-width: $spacing-unit;
- height: 100%;
- margin-right: $spacing-unit;
- &:last-child {
-   margin-right: 0;
- }
- // FLEX CONTAINER SETTINGS
- @include flexbox();
- @include flex-flow(column nowrap);
- @include justify-content(center);
- @include align-items(center);
- // FLEX ITEM SETTINGS
- @include flex(1);
- // APPERANCE
- background-color: $gray-1;
- @include border-radius($btn-border-radius);
- border: 0.125rem solid $gray-3;
- // TEXT
- color: $gray-4;
- // BEHAVIOR
- transition: transform $animate-time-fast ease-in-out;
- @include transition(all $animate-time-fast ease-in-out);
- @include bp1 {
+  @include align-items(center);
+  background-color: $gray-1;
+  border: 0.125rem solid $gray-3;
+  @include border-radius($btn-border-radius);
+  color: $gray-4;
+  @include flexbox();
+  @include flex-flow(column nowrap);
+  @include flex(1);
+  height: 100%;
+  @include justify-content(center);
+  margin-right: 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  min-width: 1rem;
+  transition: transform $animate-time-fast ease-in-out;
+  @include transition(all $animate-time-fast ease-in-out);
+  @include bp1 {
    width: 100%;
    margin-right: 0;
    margin-bottom: 0.5rem;
    &:last-child {
      margin-bottom: 0;
-   }
+  }
  }
 }
 

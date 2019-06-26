@@ -215,23 +215,23 @@ function allInactive() {
 // TOGGLE PLAYING
 function updatePlaying() {
   // PLAY TOGGLE DOM ELEMENT
-  var playToggle = document.querySelector("#play-toggle");
+  var playToggle = document.querySelector(".js-play-toggle");
 
   // TOGGLE PLAYING
   if (playing) {
     // STOP OSCILLATORS
     stopTones();
     // Update Button State
-    playToggle.classList.remove("pause-btn");
-    playToggle.classList.add("play-btn");
+    playToggle.classList.remove("btn--pause");
+    playToggle.classList.add("btn--play");
     // Update boolean
     playing = false;
   } else {
     // START OSCILLATORS
     playTones();
     // Update Button State
-    playToggle.classList.remove("play-btn");
-    playToggle.classList.add("pause-btn");
+    playToggle.classList.remove("btn--play");
+    playToggle.classList.add("btn--pause");
     // Update boolean
     playing = true;
   }
@@ -242,18 +242,26 @@ function updateKey(k) {
   var s = window.innerWidth;
 
   if (s <= 600) {
-    // SET KEY
-    key = keyFrequencies[keyState];
     // ADJUST KEY STATE
     keyState++;
     if (keyState > keyFrequencies.length - 1) {
       keyState = 0;
     }
+
+    // SET KEY
+    key = keyFrequencies[keyState];
+
     // UPDATE BUTTON LABEL
-    document.querySelector("#key-selector-mini").innerHTML = keyRootNotes[keyState];
+    document.querySelector(".js-key-selector-mini").innerHTML = keyRootNotes[keyState];
 
   } else {
     key = keyFrequencies[k];
     keyState = k;
+
+    // UPDATE BUTTON LABEL
+    document.querySelector(".js-key-selector-mini").innerHTML = keyRootNotes[keyState];
+
   }
+
+
 }

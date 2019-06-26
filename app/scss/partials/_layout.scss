@@ -1,24 +1,41 @@
-/**************************************
-GLOBAL PADDING FOR CORE LAYOUT
-**************************************/
+/*------------------------------------*\
+  # SITE CONTAINER
+\*------------------------------------*/
 
-#main-container, #top-bar, #control-bar, #about-modal {
+.site-container {
+  @include flexbox;
+  @include flex-flow(column nowrap);
+  @include justify-content(space-between);
+}
+
+
+
+/*------------------------------------*\
+  #GLOBAL PADDING FOR CORE LAYOUT
+\*------------------------------------*/
+
+.main-container, .top-bar, .control-bar, .about {
   @include horizontal-layout-padding;
 }
 
-/**************************************
-MAIN INTERACTION AREA
-**************************************/
 
-#main-container {
+
+/*------------------------------------*\
+  #CONTAINER FOR MAIN INTERACTION AREA
+\*------------------------------------*/
+
+.main-container {
   // LAYOUT
   height: calc(100vh - #{$top-bar-height} - #{$control-bar-height});
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  // FLEXBOX
   @include flexbox;
   @include flex-flow(row nowrap);
   @include justify-content(space-between);
   @include align-items(center);
+
   // SMALLEST SCREENS
   @include bp1 {
     padding-top: 1.25rem;
@@ -27,12 +44,14 @@ MAIN INTERACTION AREA
   }
 }
 
-/**************************************
-TOP BAR AND CONTROLS
-**************************************/
+
+
+/*------------------------------------*\
+  #TOP BAR AND CONTROL BAR
+\*------------------------------------*/
 
 // SHARED STYLES
-#top-bar, #control-bar {
+.top-bar, .control-bar {
   // LAYOUT
   @include flexbox;
   @include flex-flow(column nowrap);
@@ -40,7 +59,7 @@ TOP BAR AND CONTROLS
 }
 
 // CONTAINER FOR ALL CONTROL ELEMENTS
-#top-container, #controls-container {
+.top-bar__inner-container, .control-bar__inner-container {
   // LAYOUT
   width: 100%;
   @include flexbox;
@@ -48,65 +67,109 @@ TOP BAR AND CONTROLS
   @include justify-content(space-between);
 }
 
-// TOP BAR
-#top-bar {
+
+
+/*------------------------------------*\
+  #TOP BAR
+\*------------------------------------*/
+
+.top-bar {
   // LAYOUT
   height: $top-bar-height;
   // FLEX CONTAINER SETTINGS
   @include align-items(center);
   // APPEARANCE
   border-bottom: 1px solid $gray-2;
+  @include bp1 {
+    height: $top-bar-height-sm;
+  }
 }
 
-// CONTROL BAR
-#control-bar {
+
+/*------------------------------------*\
+  #CONTROL BAR
+\*------------------------------------*/
+
+.control-bar {
   // LAYOUT
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   height: $control-bar-height;
   // APPERANCE
   border-top: 1px solid $gray-3;
+  @include bp1 {
+    height: $control-bar-height-sm;
+  }
 }
 
 // MAX WIDTH FOR CONTROLS CONTAINER
-#controls-container {
-  // LAYOUT
+.control-bar__inner-container {
   margin: 0 auto;
   max-width: $controls-max-width;
   max-height: $controls-max-height;
 }
 
-/**************************************
-INDIVIDUAL CONTROL ELEMENT CONTAINERS
-**************************************/
-
-// GLOBAL STYLES FOR ALL CONTAINERS
-.btn-element, .control-element {
+// CONTAINER FOR EACH CONTROL
+.control-bar__control-container {
   // LAYOUT
+  flex: 1;
+  margin-left: 2rem;
   width: 100%;
-  margin-left: 2.5rem;
   @include bp1 {
     width: auto;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
   }
   &:first-child {
     margin-left: 0;
   }
 }
 
-// CONTAINER FOR BUTTON ELEMENTS
-.btn-element {
+// MODIFY BUTTON CONTAINERS TO NOT STRETCH
+.control-bar__control-container--btn {
   // LAYOUT
   text-align: center;
   @include flex(0);
 }
 
-/**************************************
-MODAL
-**************************************/
+.control-bar__control-label-container {
+  margin-bottom: 0.25rem;
+}
+
+.control-bar__control-label-container--with-readout {
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(space-between);
+}
+
+.control-bar__control {
+  height: $controls-height;
+}
+
+// MODIFIER FOR HEIGHT OF PRIMARY CONTROL
+.control-bar__control--primary {
+  height: 100%;
+}
+
+// MODIFIER FOR GROUP OF TOGGLE BUTTONS
+.control-bar__control--toggle-group {
+  @include flexbox;
+  @include flex-flow(row nowrap);
+  @include justify-content(flex-start);
+}
+
+// MODIFIER FOR VERTICALLY CENTERING CONTROL
+.control-bar__control--ctrY {
+  @include flexbox;
+  @include flex-flow(column nowrap);
+  @include justify-content(center);
+}
+
+
+
+/*------------------------------------*\
+  #ABOUT CONTENT
+\*------------------------------------*/
 
 // FULL SCREEN MODAL STYLE
-.modal {
+.about {
   // LAYOUT
   position: absolute;
   top: 0;
@@ -126,10 +189,10 @@ MODAL
   @include transition(visibility $animate-time-fast linear);
 }
 
-// OPEN MODAL
-.modal.visible {
+// MOIFIER TO MAKE MODAL VISIBLE
+.about--visible {
   // APPEARANCE
-  opacity: 0.95;
+  opacity: 0.99;
   visibility: visible;
   // BEHAVIOR
   pointer-events: auto;
@@ -137,29 +200,40 @@ MODAL
   @include transition(opacity $animate-time-fast ease-in);
 }
 
-// ABOUT CONTENT CONTAINER
-.about-content {
+.about_close-btn-container {
+  // LAYOUT
+  position: absolute;
+  top: 1.25rem;
+  right: 3rem;
+
+  // SMALLEST SCREENS
+  @include bp1 {
+    top: 1rem;
+    right: 1rem;
+  }
+
+}
+
+.about_content-container {
   // LAYOUT
   margin: 0 auto;
+  max-width: $content-max-width;
   padding-top: 5rem;
   padding-bottom: 5rem;
   width: 100%;
-  max-width: $content-max-width;
 }
+
+.about_content-section {
+  // LAYOUT
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
 
 /**************************************
 GENERAL POSITIONING
 **************************************/
-
-// CENTER TEXT ON SMALLEST SCREENS
-.t-ctr-bp1 {
-  @include bp1 {
-    text-align: center;
-  }
-}
-
-// CONTENT SECTIONS
-.content-section {
-  // LAYOUT
-  margin-bottom: 2rem;
-}

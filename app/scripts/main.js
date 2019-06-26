@@ -10,7 +10,7 @@ var numBeats = 8;
 var playing = false;
 
 // TEMPO CONTROL
-var tempoControl = document.querySelector("#tempo");
+var tempoControl = document.querySelector(".js-tempo-control");
 var bpm = Number(tempoControl.value);
 var delay;  // TIMER FOR SET TIMEOUT
 

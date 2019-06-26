@@ -45,21 +45,22 @@ function setupInteraction() {
   }, false);
 
   // PLAY/PAUSE BUTTON
-  document.querySelector("#play-toggle").addEventListener('click', function(e){
+  document.querySelector(".js-play-toggle").addEventListener('click', function(e){
     updatePlaying();
     e.target.blur();
   }, false);
 
   // KEY SELECTOR
-  document.querySelector('.key-selector').addEventListener('click', function(e){
+  document.querySelector(".js-key-toggle").addEventListener('click', function(e){
     var k = Number(e.target.value);
     updateKey(k);
     updateToggleStatus(e);
     updateToggleDivs();
+    e.target.blur();
   }, false);
 
   // MOBILE KEY SELECTOR
-  document.querySelector("#key-selector-mini").addEventListener('click', function(e){
+  document.querySelector(".js-key-selector-mini").addEventListener('click', function(e){
     k = null;
     updateKey(k);
     updateToggleDivs();
@@ -68,13 +69,13 @@ function setupInteraction() {
   // TEMPO SLIDER
   tempoControl.addEventListener("input", function() {
     bpm = Number(this.value);
-    document.querySelector("#tempo-readout").innerHTML = this.value;
+    document.querySelector(".js-tempo-readout").innerHTML = this.value;
     calcDelay();
     // console.log(bpm);
   }, false);
 
   // REFRESH BUTTON
-  document.querySelector("#refresh-btn").addEventListener('click', function(e){
+  document.querySelector(".js-refresh-btn").addEventListener('click', function(e){
     for (var i = 0; i < numToggles; i++) {
       updateToggleRhythm(i);
     }
@@ -82,14 +83,14 @@ function setupInteraction() {
   }, false);
 
   // ABOUT BUTTON - SHOW ABOUT MODAL
-  document.querySelector("#about-modal-open").addEventListener("click", function() {
-    document.querySelector("#about-modal").classList.add("visible");
+  document.querySelector(".js-about-open-btn").addEventListener("click", function() {
+    document.querySelector(".about").classList.add("about--visible");
   }, false);
 
   // CLOSE ABOUT TOGGLE
   // ABOUT BUTTON - SHOW ABOUT MODAL
-  document.querySelector("#about-modal-close").addEventListener("click", function() {
-    document.querySelector("#about-modal").classList.remove("visible");
+  document.querySelector(".js-about-close-btn").addEventListener("click", function() {
+    document.querySelector(".about").classList.remove("about--visible");
   }, false);
 }
 
@@ -100,11 +101,11 @@ TOGGLE GROUP UPDATES
 // UPDATE TOGGLE BUTTON GROUP FOR ACTIVE SELECTION
 function updateToggleStatus(e) {
   // REMOVE SELECTED CLASS FROM ALL TOGGLES
-  var toggles = document.querySelectorAll('.toggle');
+  var toggles = document.querySelectorAll(".btn--toggle");
   for (var i=0; i<toggles.length; i++) {
-    toggles[i].classList.remove('selected');
+    toggles[i].classList.remove("btn--toggle-selected");
   }
 
   // ADD SELECTED CLASS TO SELECTED
-  e.target.classList.add( "selected" );
+  e.target.classList.add("btn--toggle-selected");
 }

@@ -25,7 +25,7 @@ function createToggleObjects() {
 // SETUP TONE TOGGLE DIVS
 function createToggleDivs() {
   // TOGGLE CONTAINER DIV
-  var pD = document.querySelector('#main-container');
+  var pD = document.querySelector('.main-container');
 
   // CREATE A DIV FOR EACH TOGGLE
   for (var i = 0; i < toneToggles.length; i++) {
@@ -37,7 +37,7 @@ function createToggleDivs() {
 
     // ADD NOTE DISPLAY ELEMENT
     var p = document.createElement('p');
-    p.classList.add('note-display');
+    p.classList.add('tone-toggle_note-display');
     t.append(p);
 
     // APPEND TO TOGGLE CONTAINER
@@ -51,7 +51,7 @@ function createToggleDivs() {
 // UPDATE TOGGLE DIVS FOR NEW KEYS
 function updateToggleDivs() {
   // GET ARRAY OF ALL TOGGLE NOTE DISPLAYS
-  var noteDisplayArray = document.querySelectorAll('.note-display');
+  var noteDisplayArray = document.querySelectorAll('.tone-toggle_note-display');
 
   // UPDATE TOGGLE NOTE AND NOTE DISPLAY TEXT BASED ON KEY
   for (var i = 0; i < toneToggles.length; i++) {
