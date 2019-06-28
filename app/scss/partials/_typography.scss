@@ -3,11 +3,10 @@
 \*------------------------------------*/
 
 h1 {
-  line-height: $content-line-height;
   font-size: $content-font-size;
   font-weight: $font-weight-normal;
+  line-height: $content-line-height;
 
-  // RESPONSIVE
   @include bp1 {
     font-size: $content-font-size-sm;
     line-height: $content-line-height-sm;
@@ -31,7 +30,7 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
-  // RESPONSIVE
+
   @include bp1 {
     font-size: $content-font-size-sm;
     line-height: $content-line-height-sm;
@@ -42,10 +41,6 @@ p {
 .control-bar__control-label, .control-bar__control-readout {
   font-size: $ui-label-font-size;
   line-height: $ui-label-line-height;
-
-  @include bp1 {
-    // font-size: $ui-label-font-size-sm;
-  }
 }
 
 // note ON EACH TONE TOGGLE
@@ -55,18 +50,8 @@ p {
   font-weight: bolder;
   line-height: $note-display-line-height;
   margin: 0;
+
   @include bp2 {
     font-size: $note-display-font-size-sm;
-  }
-}
-
-// GLOBAL MODIFIERS
-.heavy { font-weight: $font-weight-heavy; }
-.small { font-size:  $ui-label-font-size; }
-
-// CENTER TEXT ON SMALLEST SCREENS
-.t-ctr-bp1 {
-  @include bp1 {
-    text-align: center;
   }
 }

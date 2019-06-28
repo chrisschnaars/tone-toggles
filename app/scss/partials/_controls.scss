@@ -103,15 +103,18 @@ body:not(.user-is-tabbing) textarea:focus {
 // TEXT BUTOTNS (LOOK LIKE LINKS)
 // ===========================================
 
-.text-button {
-  // LAYOUT
+.btn--txt {
+  background: none;
+  border: none;
+  @include border-radius(0);
+  box-shadow: none;
 	display: block;
   height: $content-line-height;
-	// APPERANCE
-	border: none;
-  background: none;
+
+
+
 	text-align: left;
-  @include border-radius(0);
+
   border-bottom: 1px solid $primary-color;
   padding: 0;
   // TEXT

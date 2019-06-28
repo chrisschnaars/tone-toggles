@@ -2,6 +2,8 @@
   # SITE CONTAINER
 \*------------------------------------*/
 
+html, body { height: 100%; }
+
 .site-container {
   @include flexbox;
   @include flex-flow(column nowrap);
@@ -30,7 +32,8 @@
   // height: calc(100vh - #{$top-bar-height} - #{$control-bar-height});
   @include flexbox;
   @include flex-flow(row nowrap);
-  @include flex(0 1 auto);
+  @include flex(1 1 auto);
+  height: 100%;
   @include justify-content(space-between);
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -75,7 +78,6 @@
 .top-bar {
   @include align-items(center);
   border-bottom: 1px solid $gray-2;
-
   @include bp1 {
     height: $top-bar-height-sm;
   }
@@ -88,7 +90,6 @@
 
 .control-bar {
   border-top: 1px solid $gray-3;
-
   @include bp1 {
     height: $control-bar-height-sm;
   }
