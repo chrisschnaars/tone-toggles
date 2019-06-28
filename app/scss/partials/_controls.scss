@@ -43,7 +43,7 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .btn:active {
-  background-color: $gray-3;
+
 }
 
 .btn > * {
@@ -67,7 +67,7 @@ body:not(.user-is-tabbing) textarea:focus {
   width: $primary-btn-size;
 }
 
-.btn--primary:hover {
+.btn--primary:hover, .btn--primary:focus {
   background-color: $primary-color-dark;
 }
 
@@ -86,6 +86,10 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 }
 
+.btn--toggle:focus {
+  z-index: 1;
+}
+
 // ACTIVE CLASS FOR THE SELECTED BUTTON
 .btn--toggle-selected {
 	background-color: $primary-color;
@@ -93,49 +97,11 @@ body:not(.user-is-tabbing) textarea:focus {
   opacity: 1;
 }
 
-.btn--toggle-selected:hover {
+.btn--toggle-selected:hover, .btn--toggle-selected:focus {
   background-color: $primary-color;
 }
 
 
-
-// ===========================================
-// TEXT BUTOTNS (LOOK LIKE LINKS)
-// ===========================================
-
-.btn--txt {
-  background: none;
-  border: none;
-  @include border-radius(0);
-  box-shadow: none;
-	display: block;
-  height: $content-line-height;
-
-
-
-	text-align: left;
-
-  border-bottom: 1px solid $primary-color;
-  padding: 0;
-  // TEXT
-  font-size: $content-font-size;
-  line-height: $content-line-height;
-  color: $primary-color;
-  @include bp1 {
-    border: none;
-  }
-}
-
-.text-button:hover {
-  // APPEARANCE
-  cursor: pointer;
-  background-color: $white;
-}
-
-.text-button:focus {
-  // APPEARANCE
-  background-color: $white;
-}
 
 
 
