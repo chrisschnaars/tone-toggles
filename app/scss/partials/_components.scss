@@ -17,3 +17,7 @@ a:hover {
 a:visited {
   color: $primary-color;
 }
+
+.a--no-border {
+  border-bottom: none;
+}

@@ -2,12 +2,10 @@
   # SITE CONTAINER
 \*------------------------------------*/
 
-html, body { height: 100%; }
-
 .site-container {
   @include flexbox;
   @include flex-flow(column nowrap);
-  height: 100%;
+  height: 100vh;
   @include justify-content(space-between);
 }
 
@@ -33,15 +31,13 @@ html, body { height: 100%; }
   @include flexbox;
   @include flex-flow(row nowrap);
   @include flex(1 1 auto);
-  height: 100%;
+  // height: calc(100vh);
   @include justify-content(space-between);
   padding-top: 1rem;
   padding-bottom: 1rem;
 
   @include bp1 {
     @include flex-flow(column nowrap);
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
   }
 }
 
@@ -78,9 +74,7 @@ html, body { height: 100%; }
 .top-bar {
   @include align-items(center);
   border-bottom: 1px solid $gray-2;
-  @include bp1 {
-    height: $top-bar-height-sm;
-  }
+  height: $top-bar-height;
 }
 
 
@@ -90,9 +84,7 @@ html, body { height: 100%; }
 
 .control-bar {
   border-top: 1px solid $gray-3;
-  @include bp1 {
-    height: $control-bar-height-sm;
-  }
+  height: $control-bar-height;
 }
 
 // MAX WIDTH FOR CONTROLS CONTAINER
@@ -189,7 +181,7 @@ html, body { height: 100%; }
   visibility: visible;
 }
 
-.about_close-btn-container {
+.about__close-btn-container {
   position: absolute;
   right: 3rem;
   top: 1.25rem;
@@ -200,7 +192,7 @@ html, body { height: 100%; }
   }
 }
 
-.about_content-container {
+.about__content-container {
   margin: 0 auto;
   max-width: $content-max-width;
   padding-top: 5rem;
@@ -208,7 +200,7 @@ html, body { height: 100%; }
   width: 100%;
 }
 
-.about_content-section {
+.about__content-section {
   // LAYOUT
   margin-bottom: 2rem;
 
