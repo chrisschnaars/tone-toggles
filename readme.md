@@ -9,7 +9,7 @@ Each tone toggle is set to the same 8-beat rhythm. Turning one on will cause the
 ## Keyboard Shortcuts
 Spacebar  >>  Play/Pause  
 A, S, D, F, J, K, L, ;  >>  Tone Toggles
-1, 2, 3, 4, 5  >>  Tone Toggles
+1, 2, 3, 4, 5  >>  Key
 
 ## Audio Interactions
 Each Tone Toggle is set to the same 8-beat rhythm. However, unlike most sequencers, the user has no control over what beats a Tone Toggle can play on.
