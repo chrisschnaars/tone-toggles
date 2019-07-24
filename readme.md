@@ -8,7 +8,7 @@ Each tone toggle is set to the same 8-beat rhythm. Turning one on will cause the
 
 ## Keyboard Shortcuts
 Spacebar  >>  Play/Pause  
-A, S, D, F, J, K, L, ;  >>  Tone Toggles
+A, S, D, F, J, K, L, ;  >>  Tone Toggles  
 1, 2, 3, 4, 5  >>  Key
 
 ## Audio Interactions
