@@ -25,7 +25,6 @@ function setupInteraction() {
     for (var i = 0; i < keyCodes.length; i++) {
       if (e.key.toLowerCase() === keyCodes[i]) {
         var id = keyCodes.indexOf(keyCodes[i]);
-        // console.log(id);
         toneToggles[id].toggle();
         checkPlaying();
       }
@@ -38,7 +37,6 @@ function setupInteraction() {
 
     // TABBING
     if (e.key === 'Tab') { // the "I am a keyboard user" key
-        console.log('tab key man');
         document.body.classList.add('user-is-tabbing');
         // window.removeEventListener('keydown', handleFirstTab);
     }
@@ -70,8 +68,9 @@ function setupInteraction() {
   tempoControl.addEventListener("input", function() {
     bpm = Number(this.value);
     document.querySelector(".js-tempo-readout").innerHTML = this.value;
+    tempoControl.setAttribute('aria-valuenow', bpm);
+    tempoControl.setAttribute('value', bpm);
     calcDelay();
-    // console.log(bpm);
   }, false);
 
   // REFRESH BUTTON
@@ -88,7 +87,6 @@ function setupInteraction() {
   }, false);
 
   // CLOSE ABOUT TOGGLE
-  // ABOUT BUTTON - SHOW ABOUT MODAL
   document.querySelector(".js-about-close-btn").addEventListener("click", function() {
     document.querySelector(".about").classList.remove("about--visible");
   }, false);

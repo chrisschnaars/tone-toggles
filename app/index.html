@@ -65,7 +65,7 @@
           <div class="control-bar__control-container bp1-hidden">
 
             <div class="control-bar__control-label-container">
-              <label class="control-bar__control-label" for="key">Key</label>
+              <p class="control-bar__control-label">Key</p>
             </div>
 
             <div class="control-bar__control control-bar__control--toggle-group js-key-toggle">
@@ -87,11 +87,10 @@
             </div>
           </div>
 
-
-          <!-- MOBILE BUTTON -->
+          <!-- MOBILE KEY SELECTOR BUTTON -->
           <div class="control-bar__control-container control-bar__control-container--btn bp1-visible">
             <div class="control-bar__control-label-container">
-              <label for="refresh-btn" class="control-bar__control-label">Key</label>
+              <p class="control-bar__control-label">Key</p>
             </div>
 
             <div class="control-bar__control">
@@ -101,37 +100,39 @@
             </div>
           </div>
 
-
-
           <!-- TEMPO CONTROL -->
           <div class="control-bar__control-container">
 
             <div class="control-bar__control-label-container control-bar__control-label-container--with-readout">
-              <label for="tempo" class="control-bar__control-label">Tempo</label>
+              <p class="control-bar__control-label">Tempo</p>
               <p class="control-bar__control-readout js-tempo-readout">120</p>
             </div>
 
             <div class="control-bar__control control-bar__control--ctrY">
-              <input class="control-bar__slider range-slider js-tempo-control" name="tempo" type="range" role="slider" min="40" max="220" value="120" step="1" aria-valuemin="40" aria-valuemax="220" aria-valuenow="120" aria-labeledby="tempo">
+              <input class="control-bar__slider range-slider js-tempo-control" name="tempo" type="range" role="slider" min="40" max="220" value="120" step="1" aria-valuemin="40" aria-valuemax="220" aria-valuenow="120">
             </div>
           </div>
 
           <!-- REFRESH INTERVAL SELECTION -->
           <div class="control-bar__control-container control-bar__control-container--btn">
             <div class="control-bar__control-label-container">
-              <label for="refresh-btn" class="control-bar__control-label">Refresh</label>
+              <p class="control-bar__control-label">Refresh</p>
             </div>
 
             <div class="control-bar__control">
-              <button class="control-bar__btn btn btn--icon btn--refresh js-refresh-btn" type="button" name="refresh" aria-label="Refresh Notes"></button>
+              <button class="control-bar__btn btn btn--icon btn--refresh js-refresh-btn" type="button" name="refresh" aria-label="Refresh Intervals"></button>
             </div>
           </div>
 
         </div>
-      </div>
 
-    <!-- END CONTROL BAR SECTION -->
-    </section>
+      <!-- END CONTROL BAR SECTION -->
+      </section>
+
+
+
+    <!-- END SITE CONTAINER -->
+    </div>
 
 
 
@@ -176,7 +177,7 @@
 
 
     <!-- Load Main Script  -->
-    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/main.js"></script>
 
 
 

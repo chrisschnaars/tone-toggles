@@ -41,6 +41,7 @@ p {
 .control-bar__control-label, .control-bar__control-readout {
   font-size: $ui-label-font-size;
   line-height: $ui-label-line-height;
+  margin-bottom: 0;
 }
 
 // note ON EACH TONE TOGGLE
