@@ -6,8 +6,8 @@ TONE AND KEY SETUP
 var keyState = 0;
 
 // ROOT FREQUENCY FOR KEYS
-var keyFrequencies = [ 110, 130.81, 146.83, 164.81, 207.65 ];
-var keyRootNotes = [ "A", "C", "D", "E", "G#" ];
+var keyFrequencies = [ 110, 130.81, 138.59, 146.83, 164.81 ];
+var keyRootNotes = [ "A", "C", "C#", "D", "E" ];
 
 // INTERVAL FOR EACH NOTE OF THE SCALE
 // ROOT, THIRD, FIFTH, 1 OCTAVE, MINOR THIRD, PERF FOURTH, SEVENTH, 2 OCTAVE
@@ -24,28 +24,20 @@ var key = keyFrequencies[0];  // root frequency
   Scales:
   A Major: A, B, C#, D, E, F#, G#
   C Major: C, D, E, F, G, A, B
+  C# Major: C#, D#, E#, F#, G#, A#, B#
   D Major: D, E, F#, G, A, B, C#
   E Major: E, F#, G#, A, B, C#, D#
   G# Major: G#, A#, B#, C#, D#, E#, F
 */
-
-// var scaleNotes = [
-//   [ 0, 4, 7, 11, 0, 5, 9, 1 ],
-//   [ 3, 5, 7, 8, 10, 0, 2, 4 ],
-//   [ 5, 7, 9, 10, 0, 2, 4, 5 ],
-//   [ 7, 9, 11, 0, 2, 4, 6, 7 ],
-//   [ 11, 1, ]
-//   [ "G#", "A#", "B#", "C#", "D#", "E#", "F", "G#" ]
-// ]
 
 // ARRAY OF NOTES FOR EACH KEY
 // ROOT, THIRD, FIFTH, 1 OCTAVE, MINOR THIRD, PERF FOURTH, SEVENTH, 2 OCTAVE
 var scaleNotes = [
   [ "A", "C&#9839;", "E", "A", "C", "D", "G&#9839;", "A" ],
   [ "C", "E", "G", "C", "E&#9837;", "F", "B", "C" ],
-  [ "D", "F&#9839;", "G", "D", "F", "G", "C&#9839;", "D" ],
-  [ "E", "G&#9839;", "B", "E", "G", "A", "D&#9839;", "E" ],
-  [ "G&#9839;", "B&#9839;", "D&#9839;", "G&#9839;", "B", "C&#9839;", "F", "G&#9839;" ]
+  [ "C&#9839;", "E&#9839;", "G&#9839;", "C&#9839;", "E", "F&#9839;", "B&#9839;", "C&#9839;" ],
+  [ "D", "F&#9839;", "A", "D", "F", "G", "C&#9839;", "D" ],
+  [ "E", "G&#9839;", "B", "E", "G", "A", "D&#9839;", "E" ]
 ];
 
 // COLOR OF EACH NOTE
