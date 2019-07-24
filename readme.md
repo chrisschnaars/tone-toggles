@@ -7,8 +7,9 @@ Click or tap on the gray bars (aka "Tone Toggles") to turn them on and off. You 
 Each tone toggle is set to the same 8-beat rhythm. Turning one on will cause them to play to a random selection of beats. You cannot control what beat they play on, but you can change their beat selection by turning them on and off.
 
 ## Keyboard Shortcuts
-Spacebar: Play/Pause  
-A, S, D, F, J, K, L, ; : Tone Toggles
+Spacebar  >>  Play/Pause  
+A, S, D, F, J, K, L, ;  >>  Tone Toggles
+1, 2, 3, 4, 5  >>  Tone Toggles
 
 ## Audio Interactions
 Each Tone Toggle is set to the same 8-beat rhythm. However, unlike most sequencers, the user has no control over what beats a Tone Toggle can play on.
