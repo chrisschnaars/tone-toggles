@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 .site-container {
-  @include flexbox;
-  @include flex-flow(column nowrap);
+  display: flex;
+  flex-flow: column nowrap;
   height: 100vh;
-  @include justify-content(space-between);
+  justify-content: space-between;
 }
 
 
@@ -26,18 +26,15 @@
 \*------------------------------------*/
 
 .main-container {
-  @include align-items(center);
-  // height: calc(100vh - #{$top-bar-height} - #{$control-bar-height});
-  @include flexbox;
-  @include flex-flow(row nowrap);
-  @include flex(1 1 auto);
-  // height: calc(100vh);
-  @include justify-content(space-between);
+  align-items: stretch;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
   @include bp1 {
-    @include flex-flow(column nowrap);
+    flex-flow: column nowrap;
   }
 }
 
@@ -49,19 +46,15 @@
 
 // SHARED STYLES
 .top-bar, .control-bar {
-  @include flexbox;
-  @include flex-flow(column nowrap);
-  @include flex(0);
-  @include justify-content(center);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 // CONTAINER FOR ALL CONTROL ELEMENTS
 .top-bar__inner-container, .control-bar__inner-container {
-  @include flexbox;
-  @include flex-flow(row nowrap);
-  @include justify-content(space-between);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -72,7 +65,6 @@
 \*------------------------------------*/
 
 .top-bar {
-  @include align-items(center);
   border-bottom: 1px solid $gray-2;
   height: $top-bar-height;
 }
@@ -112,7 +104,7 @@
 
 // MODIFY BUTTON CONTAINERS TO NOT STRETCH
 .control-bar__control-container--btn {
-  @include flex(0);
+  flex: 0;
   text-align: center;
 }
 
@@ -121,9 +113,8 @@
 }
 
 .control-bar__control-label-container--with-readout {
-  @include flexbox;
-  @include flex-flow(row nowrap);
-  @include justify-content(space-between);
+  display: flex;
+  justify-content: space-between;
 }
 
 .control-bar__control {
@@ -137,16 +128,15 @@
 
 // MODIFIER FOR GROUP OF TOGGLE BUTTONS
 .control-bar__control--toggle-group {
-  @include flexbox;
-  @include flex-flow(row nowrap);
-  @include justify-content(flex-start);
+  display: flex;
+  justify-content: flex-start;
 }
 
 // MODIFIER FOR VERTICALLY CENTERING CONTROL
 .control-bar__control--ctrY {
-  @include flexbox;
-  @include flex-flow(column nowrap);
-  @include justify-content(center);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 
@@ -165,8 +155,8 @@
   pointer-events: none;
   position: absolute;
   top: 0;
-  @include transition(opacity $animate-time-fast linear);
-  @include transition(visibility $animate-time-fast linear);
+  transition: opacity $animate-time-fast linear;
+  transition: visibility $animate-time-fast linear;
   visibility: hidden;
   width: 100%;
   z-index: 100;
@@ -176,8 +166,8 @@
 .about--visible {
   opacity: 0.99;
   pointer-events: auto;
-  @include transition(visibility $animate-time-fast linear);
-  @include transition(opacity $animate-time-fast ease-in);
+  transition: opacity $animate-time-fast linear;
+  transition: visibility $animate-time-fast linear;
   visibility: visible;
 }
 

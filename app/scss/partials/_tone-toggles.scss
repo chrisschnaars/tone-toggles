@@ -4,27 +4,29 @@
 
 // TONE TOGGLE DEFAULT STATE
 .tone-toggle {
-  @include align-items(center);
+  align-items: center;
   background-color: $gray-1;
   border: 0.125rem solid $gray-3;
-  @include border-radius($btn-border-radius);
+  border-radius: $btn-border-radius;
   color: $gray-4;
-  @include flexbox();
-  @include flex-flow(column nowrap);
-  @include flex(1);
-  height: 100%;
-  @include justify-content(center);
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 0;
+  justify-content: center;
   margin-right: 1rem;
+  min-width: 1rem;
+  transition: transform $animate-time-fast ease-in-out;
+  transition: all $animate-time-fast ease-in-out;
+
   &:last-child {
     margin-right: 0;
   }
-  min-width: 1rem;
-  transition: transform $animate-time-fast ease-in-out;
-  @include transition(all $animate-time-fast ease-in-out);
+
   @include bp1 {
    width: 100%;
    margin-right: 0;
    margin-bottom: 0.5rem;
+
    &:last-child {
      margin-bottom: 0;
   }
@@ -33,12 +35,9 @@
 
 // GLOBAL TOGGLE HOVER BEHAVIOR
 .tone-toggle:hover {
-  // APPEARANCE
-  cursor: pointer;
   background-color: $gray-3;
   border-color: $gray-3;
-  // TEXT
   color: $gray-5;
-  // BEHAVIOR
-  @include scale(0.985);
+  cursor: pointer;
+  transform: scale(0.985);
 }

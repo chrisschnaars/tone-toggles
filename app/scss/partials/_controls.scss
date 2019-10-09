@@ -19,7 +19,7 @@ body:not(.user-is-tabbing) textarea:focus {
   background: $gray-2;
   border: none;
   @include global-box-shadow;
-  @include border-radius($btn-border-radius);
+  border-radius: $btn-border-radius;
 	color: $black;
   cursor: pointer;
 	display: inline-block;
@@ -32,18 +32,12 @@ body:not(.user-is-tabbing) textarea:focus {
   padding: 0.75rem 1rem;
   text-align: center;
 	text-decoration: none;
+  transition: background-color $animate-time-fast ease;
 	-webkit-appearance: none;
-
-  @include transition(background-color $animate-time-fast ease);
 }
 
 .btn:hover, .btn:focus {
-  // opacity: 0.85;
   background-color: $gray-3;
-}
-
-.btn:active {
-
 }
 
 .btn > * {
@@ -55,7 +49,7 @@ body:not(.user-is-tabbing) textarea:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  @include border-radius(50%);
+  border-radius: 50%;
   padding: 0;
   width: $controls-height;
 }
@@ -73,9 +67,9 @@ body:not(.user-is-tabbing) textarea:focus {
 
 // TOGGLE BUTTON MODIFICATION
 .btn--toggle {
-  @include border-radius(0);
+  border-radius: 0;
   box-shadow: none;
-  @include flex(1);
+  flex: 1 1 0;
 
   &:first-child {
     @include border-radii($btn-border-radius, 0, 0, $btn-border-radius);

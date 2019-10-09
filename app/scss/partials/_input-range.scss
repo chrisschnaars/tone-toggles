@@ -39,7 +39,7 @@ $track-shadow-color: rgba(0, 0, 0, 0) !default;
   background: $thumb-color;
 
   &:focus {
-    @include box-shadow-btn-focus;
+    box-shadow: 0, 0, 0, 0, rgba(0,0,0,0.25);
   }
 }
 
@@ -48,13 +48,9 @@ $track-shadow-color: rgba(0, 0, 0, 0) !default;
   width: $track-width;
   background: transparent;
 
-  &:focus {
-    // outline: none;
-  }
-
   &::-webkit-slider-runnable-track {
     @include track;
-    @include box-shadow(0, 0, 0, 0, rgba(0,0,0,0));
+    box-shadow: 0, 0, 0, 0, rgba(0,0,0,0);
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
     background: $track-color;
@@ -63,7 +59,6 @@ $track-shadow-color: rgba(0, 0, 0, 0) !default;
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    // margin-top: ($track-height) / (2 - $thumb-height / 2);
     margin-top: -0.575rem;
 
   }
@@ -74,7 +69,7 @@ $track-shadow-color: rgba(0, 0, 0, 0) !default;
 
   &::-moz-range-track {
     @include track;
-    @include box-shadow(0, 0, 0, 0, rgba(0,0,0,0));
+    box-shadow: 0, 0, 0, 0, rgba(0,0,0,0);
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
     background: $track-color;
@@ -93,14 +88,14 @@ $track-shadow-color: rgba(0, 0, 0, 0) !default;
   }
 
   &::-ms-fill-lower {
-    @include box-shadow(0, 0, 0, 0, rgba(0,0,0,0));
+    box-shadow: 0, 0, 0, 0, rgba(0,0,0,0);
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius * 2;
     background: $track-color;
   }
 
   &::-ms-fill-upper {
-    @include box-shadow(0, 0, 0, 0, rgba(0,0,0,0));
+    box-shadow: 0, 0, 0, 0, rgba(0,0,0,0);
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius * 2;
     background: $track-color;
