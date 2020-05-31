@@ -1,0 +1,9 @@
+.range-slider {
+    @include input-type-range;
+    margin: 0;
+    min-width: 100px;
+
+    @media (min-width: $breakpoint_medium) {
+        min-width: 240px;
+    }
+}

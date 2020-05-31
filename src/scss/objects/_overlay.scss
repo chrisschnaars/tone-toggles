@@ -1,0 +1,26 @@
+.overlay {
+    background-color: $color_gray-1;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: all $transition-duration-long $transition-timing-base;
+    width: 100%;
+    z-index: 100;
+}
+
+.overlay--visible {
+    opacity: 0.99;
+    pointer-events: auto;
+    transition: all $transition-duration-base $transition-timing-base;
+    visibility: visible;
+}
+
+.overlay__close-btn-container {
+    position: absolute;
+    right: $space-2;
+    top: $space-2;
+}

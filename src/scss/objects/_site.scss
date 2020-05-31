@@ -1,0 +1,17 @@
+.site {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.site__header {
+    flex: 0 0 auto;
+}
+
+.site__main {
+    flex: 1 1 auto;
+}
+
+.site__footer {
+    flex: 0 0 auto;
+}

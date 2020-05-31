@@ -1,0 +1,12 @@
+a {
+    border-bottom: 2px solid $color_primary;
+    color: $color_primary;
+    text-decoration: none;
+    transition: all $transition-duration-base $transition-timing-base;
+
+    &:focus,
+    &:hover {
+        border-color: $color-white;
+        opacity: 0.85;
+    }
+}

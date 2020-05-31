@@ -1,0 +1,73 @@
+// Font family
+$font-family_body: 'Rubik', Helvetica, sans-serif;
+$font-family_heading: 'Rubik', Helvetica, sans-serif;
+
+// Font Sizes
+$font-size_14: 0.875rem;
+$font-size_16: 1rem;
+$font-size_18: 1.125rem;
+$font-size_20: 1.25rem;
+$font-size_24: 1.5rem;
+$font-size_28: 1.75rem;
+$font-size_36: 2.25rem;
+
+$body-font-size: 1.125rem;
+$body-line-height: 1.75rem;
+
+// Font Weights
+$font-weight_heading: 500;
+$font-weight_sub-heading: 500;
+$font-weight_body: 400;
+
+// Colors
+$color_white: #ffffff;
+$color_gray-1: #f8f9fa;
+$color_gray-2: #ebedef;
+$color_gray-3: #dee1e3;
+$color_gray-4: #c2c8cb;
+$color_gray-5: #3e3e42;
+$color_black: #111112;
+$color_tone-toggles-purple: #650cb9;
+
+// UI Colors
+$color_primary: $color_tone-toggles-purple;
+$color_primary-dark: #490985;
+$color_primary-light: #8f27f1;
+$color_text: $color_black;
+
+// Spacing
+$base-space-value: 0.5rem;
+
+$space-values: (
+    '0': 0,
+    '1': $base-space-value,
+    '2': $base-space-value * 2,
+    '3': $base-space-value * 3,
+    '4': $base-space-value * 4,
+    '6': $base-space-value * 6,
+    '8': $base-space-value * 8,
+    '12': $base-space-value * 12,
+    '16': $base-space-value * 16,
+);
+
+$space-0: map-get($space-values, '0');
+$space-1: map-get($space-values, '1');
+$space-2: map-get($space-values, '2');
+$space-3: map-get($space-values, '3');
+$space-4: map-get($space-values, '4');
+$space-6: map-get($space-values, '6');
+$space-8: map-get($space-values, '8');
+$space-12: map-get($space-values, '12');
+$space-16: map-get($space-values, '16');
+
+// Animation
+$transition-duration-base: 150ms;
+$transition-duration-long: 350ms;
+$transition-timing-base: ease-in-out;
+
+// Styles
+$border-radius_btn: 0.25rem;
+
+// Breakpoints
+$breakpoint_small: 37.5rem; // 600px
+$breakpoint_medium: 48rem; // 720px

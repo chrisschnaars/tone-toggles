@@ -1,0 +1,16 @@
+.top-bar {
+    border-bottom: 1px solid $color_gray-2;
+}
+
+.top-bar__inner-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar__site-title {
+    font-size: $body-font-size;
+    font-weight: $font-weight_body;
+    line-height: $body-line-height;
+    margin: 0;
+}

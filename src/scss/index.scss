@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@import 'settings/variables';
+
+@import 'tools/range-slider-mixin';
+
+@import 'generic/reset';
+
+@import 'elements/header';
+@import 'elements/footer';
+@import 'elements/forms';
+@import 'elements/layout';
+@import 'elements/links';
+@import 'elements/lists';
+@import 'elements/media';
+@import 'elements/typography';
+
+@import 'objects/container';
+@import 'objects/overlay';
+@import 'objects/site';
+
+@import 'components/about';
+@import 'components/buttons';
+@import 'components/control-bar';
+@import 'components/play-btn';
+@import 'components/range-slider';
+@import 'components/tone-toggles';
+@import 'components/top-bar';
+
+@import 'utilities/visibility';
+
+// // Modules and Variables
+// @import 'partials/config';
+// @import 'partials/mixins';
+// @import 'partials/input-range';
+//
+// // Partials
+// @import 'partials/reset';
+// @import 'partials/typography';
+// @import 'partials/layout';
+// @import 'partials/tone-toggles';
+// @import 'partials/components';
+// @import 'partials/controls';

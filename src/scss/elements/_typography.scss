@@ -1,0 +1,94 @@
+html {
+    color: $color_text;
+    font-family: $font-family_body;
+    font-size: 100%;
+    font-weight: $font-weight_body;
+    line-height: 1;
+}
+
+/*
+  h1:
+  large screen: 42/44
+  small screen: 28/36
+*/
+h1 {
+    font-size: 1.75rem;
+    font-weight: $font-weight_heading;
+    line-height: 3rem;
+    margin: 0 0 $space-6;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 2.625rem;
+        line-height: 2.75rem;
+    }
+}
+
+/*
+  h2:
+  large screen: 28/32
+  small screen: 32/35
+*/
+h2 {
+    font-size: 1.5rem;
+    font-weight: $font-weight_heading;
+    line-height: 2.5rem;
+    margin: 0 0 $space-4;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 2rem;
+        line-height: 2.25rem;
+    }
+}
+
+/*
+  h3:
+  large screen: 24/32
+  small screen: 21/28
+*/
+h3 {
+    font-size: 1.3125rem;
+    font-weight: $font-weight_sub-heading;
+    line-height: 1.75rem;
+    margin: 0 0 $space-2;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+/*
+  h4:
+  large screen: 21/28
+  small screen: 18/24
+*/
+h4 {
+    font-size: 1.125rem;
+    font-weight: $font-weight_sub-heading;
+    line-height: 1.5rem;
+    margin: 0 0 $space-2;
+
+    @media (min-width: $breakpoint_small) {
+        font-size: 1.3125rem;
+        line-height: 1.75rem;
+    }
+}
+
+/*
+  body copy: 18/24
+*/
+p {
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    margin: 0 0 $space-4;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+label {
+    font-size: $body-font-size;
+    line-height: 1;
+    margin-bottom: $space-1;
+}
