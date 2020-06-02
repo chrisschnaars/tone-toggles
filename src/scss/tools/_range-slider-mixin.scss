@@ -39,7 +39,7 @@ $_slider_track-color: $color_gray-2;
 
     &::-webkit-slider-thumb {
         @include thumb;
-        margin-top: 0;
+        margin-top: calc((#{$_slider_thumb-size} - #{$_slider-track-height}) / 2 * -1);
     }
 
     &::-moz-range-track {

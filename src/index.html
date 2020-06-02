@@ -31,59 +31,59 @@
                 </div>
             </header>
 
-            <main class="site__main container tone-toggles">
-                <div class="tone-toggles__container"></div>
+            <main class="site__main container">
+                <div class="container__inner-container tone-toggles">
+                    <div class="tone-toggles__toggles-container"></div>
+                </div>
             </main>
 
             <footer class="site__footer container control-bar">
                 <div class="container__inner-container control-bar__inner-container">
                     <!-- Play Button -->
-                    <div class="control-bar__group-container">
-                        <div class="control-bar__control-container">
-                            <button
-                                class="btn btn--primary btn--large btn--round js-play-toggle"
-                                type="button"
-                                name="mute"
-                                aria-label="Play"
+                    <div class="control-bar__control-container">
+                        <button
+                            class="btn btn--primary btn--large btn--round btn--round--large js-play-toggle"
+                            type="button"
+                            name="mute"
+                            aria-label="Play"
+                        >
+                            <svg
+                                class="btn__icon btn__icon--large play-btn"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
                             >
-                                <svg
-                                    class="btn__icon btn__icon--large play-btn"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
 
-                                <svg
-                                    class="btn__icon btn__icon--large play-btn play-btn--hidden"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <rect x="6" y="4" width="4" height="16"></rect>
-                                    <rect x="14" y="4" width="4" height="16"></rect>
-                                </svg>
-                            </button>
-                        </div>
+                            <svg
+                                class="btn__icon btn__icon--large play-btn play-btn--hidden"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                        </button>
                     </div>
 
                     <div class="control-bar__group-container">
-                        <!-- Sound Bank Selector -->
+                        <!-- Key Selector -->
                         <div
-                            class="control-bar__control-container control-bar__control-container--align-left"
+                            class="control-bar__control-container control-bar__control-container--for-toggle"
                         >
-                            <!-- Larger screens -->
-                            <div class="control-bar__button-container mobile-hidden">
-                                <div class="control-bar__toggle-group js-key-toggle">
+                            <!-- Larger screens  -->
+                            <div class="control-bar__button-container bp-med--hidden">
+                                <div class="control-bar__toggle-group js-key-toggle--large">
                                     <button
                                         class="btn btn--toggle btn--toggle-selected js-key-toggle-btn"
                                         name="key"
@@ -138,14 +138,15 @@
                             </div>
 
                             <!-- Smaller screens -->
-                            <div class="control-bar__button-container mobile-visible">
+                            <div class="control-bar__button-container bp-med--visible">
                                 <button
-                                    class="btn js-key-toggle-mini js-key-toggle"
+                                    class="btn btn--round js-key-toggle--small js-key-toggle"
                                     name="key"
                                     type="button"
                                     aria-label="Toggle Key"
+                                    value="0"
                                 >
-                                    Beats
+                                    A
                                 </button>
                             </div>
 
@@ -155,7 +156,9 @@
                         </div>
 
                         <!-- Tempo Control -->
-                        <div class="control-bar__control-container mobile-hidden">
+                        <div
+                            class="control-bar__control-container control-bar__control-container--flex bp-small--hidden"
+                        >
                             <div
                                 class="control-bar__slider-container control-bar__button-container"
                             >
@@ -334,5 +337,8 @@
                 </section>
             </section>
         </div>
+
+        <!-- Load Main Script  -->
+        <script src="./js/index.js"></script>
     </body>
 </html>

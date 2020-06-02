@@ -1,4 +1,4 @@
-.mobile-hidden {
+.bp-small--hidden {
     display: none;
 
     @media (min-width: $breakpoint_small) {
@@ -6,10 +6,26 @@
     }
 }
 
-.mobile-visible {
+.bp-small--visible {
     display: inherit;
 
     @media (min-width: $breakpoint_small) {
+        display: none;
+    }
+}
+
+.bp-med--hidden {
+    display: none;
+
+    @media (min-width: $breakpoint_medium) {
+        display: inherit;
+    }
+}
+
+.bp-med--visible {
+    display: inherit;
+
+    @media (min-width: $breakpoint_medium) {
         display: none;
     }
 }

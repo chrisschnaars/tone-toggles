@@ -1,0 +1,19 @@
+.tone-toggles__beat-indicators-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tone-toggles__beat-indicator {
+    background-color: $color_gray-2;
+    border-radius: 50%;
+    height: 12px;
+    margin: 0 $space-1;
+    transition: all $transition-duration-base $transition-timing-base;
+    width: 12px;
+}
+
+.tone-toggles__beat-indicator--active {
+    background-color: $color_gray-3;
+    transform: scale(1.15);
+}

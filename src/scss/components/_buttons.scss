@@ -1,24 +1,12 @@
-$_default-btn-size--small: 2.5rem;
 $_default-btn-size: 3rem;
-$_primary-btn-size--small: 4rem;
 $_primary-btn-size: 4.5rem;
 
 .btn {
-    height: $_default-btn-size--small;
-    // line-height: 1.5rem;
-
-    @media (min-width: $breakpoint_small) {
-        height: $_default-btn-size;
-    }
+    height: $_default-btn-size;
 }
 
 .btn--large {
-    height: $_primary-btn-size--small;
-    padding: 1.25rem;
-
-    @media (min-width: $breakpoint_small) {
-        height: $_primary-btn-size;
-    }
+    height: $_primary-btn-size;
 }
 
 .btn--primary {
@@ -32,6 +20,12 @@ $_primary-btn-size: 4.5rem;
 
 .btn--round {
     border-radius: 100%;
+    width: $_default-btn-size;
+}
+
+.btn--round--large {
+    border-radius: 100%;
+    width: $_primary-btn-size;
 }
 
 .btn__inner-container {
@@ -42,24 +36,14 @@ $_primary-btn-size: 4.5rem;
 
 .btn__icon {
     display: inline-block;
-    height: 1rem;
+    height: 1.5rem;
     overflow: visible;
-    width: 1rem;
-
-    @media (min-width: $breakpoint_small) {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
+    width: 1.5rem;
 }
 
 .btn__icon--large {
-    height: 1.5rem;
-    width: 1.5rem;
-
-    @media (min-width: $breakpoint_small) {
-        height: 2rem;
-        width: 2rem;
-    }
+    height: 2rem;
+    width: 2rem;
 }
 
 .btn--toggle {
