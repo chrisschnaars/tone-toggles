@@ -1,0 +1,79 @@
+$_default-btn-size: 3rem;
+$_primary-btn-size: 4.5rem;
+
+.btn {
+    height: $_default-btn-size;
+}
+
+.btn--large {
+    height: $_primary-btn-size;
+}
+
+.btn--primary {
+    background-color: $color_primary;
+    color: $color_white;
+    &:focus,
+    &:hover {
+        background-color: $color_primary-dark;
+    }
+}
+
+.btn--round {
+    border-radius: 100%;
+    width: $_default-btn-size;
+}
+
+.btn--round--large {
+    border-radius: 100%;
+    width: $_primary-btn-size;
+}
+
+.btn__inner-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__icon {
+    display: inline-block;
+    height: 1.5rem;
+    overflow: visible;
+    width: 1.5rem;
+}
+
+.btn__icon--large {
+    height: 2rem;
+    width: 2rem;
+}
+
+.btn--toggle {
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:first-child {
+        border-radius: $border-radius_btn 0 0 $border-radius_btn;
+    }
+
+    &:last-child {
+        border-radius: 0 $border-radius_btn $border-radius_btn 0;
+    }
+
+    &:focus {
+        z-index: 1;
+    }
+}
+
+.btn--toggle-selected {
+    background-color: $color_primary;
+    color: $color-white;
+
+    &:focus {
+        background-color: $color_primary;
+    }
+
+    &:hover {
+        background-color: $color_primary-dark;
+    }
+}

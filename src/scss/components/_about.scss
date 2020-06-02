@@ -1,0 +1,16 @@
+.about__close-btn-container {
+    position: absolute;
+    right: $space-2;
+    top: $space-2;
+}
+
+.about__content-container {
+    margin: 0 auto;
+    max-width: 38rem;
+    padding: $space-8 $space-2;
+    width: 100%;
+}
+
+.about__content-section {
+    margin-bottom: 2rem;
+}
