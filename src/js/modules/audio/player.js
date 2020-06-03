@@ -3,21 +3,17 @@ import toneToggleSettings from '../tone-toggles/tone-toggle-settings';
 import keySettings from './key-settings';
 
 const player = {
-    synth: new Tone.Synth({
+    synth: new Tone.PolySynth(8, Tone.Synth, {
         oscillator: {
-            volume: 6,
-            type: 'amtriangle',
-            harmonicity: 0.5,
-            modulationType: 'sine',
+            partials: [0, 2, 3, 4],
+            portamento: 1,
         },
         envelope: {
-            attackCurve: 'exponential',
-            attack: 0.01,
-            decay: 0.2,
+            attack: 0.005,
+            decay: 0.1,
             sustain: 0.3,
-            release: 2.5,
+            release: 2,
         },
-        portamento: 0.05,
     }).toMaster(),
     keyFrequency: 0,
     activeTones: null,
