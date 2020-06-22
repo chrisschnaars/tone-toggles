@@ -1,5 +1,5 @@
 .control-bar {
-    border-top: 1px solid $color_gray-2;
+    border-top: 1px solid $color_tan-4;
 }
 
 .control-bar__inner-container {
@@ -65,6 +65,7 @@
 }
 
 .control-bar__toggle-group {
+    box-shadow: 0px 2px 8px 0px hsla(207, 61, 10, 0.2);
     display: flex;
     justify-content: flex-start;
 }

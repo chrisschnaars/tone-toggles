@@ -20,19 +20,20 @@ $font-weight_sub-heading: 500;
 $font-weight_body: 400;
 
 // Colors
+$color_tan-1: #f7f5f3;
+$color_tan-2: #eeece7;
+$color_tan-3: #e4e0d8;
+$color_tan-4: #d7d1c6;
+
 $color_white: #ffffff;
-$color_gray-1: #f8f9fa;
-$color_gray-2: #ebedef;
-$color_gray-3: #dee1e3;
-$color_gray-4: #c2c8cb;
-$color_gray-5: #3e3e42;
-$color_black: #111112;
-$color_tone-toggles-purple: #650cb9;
+$color_light-gray: #e5e8eb;
+$color_medium-gray: #77838d;
+$color_dark-gray: #2c2d48;
+$color_black: #0e1216;
 
 // UI Colors
-$color_primary: $color_tone-toggles-purple;
-$color_primary-dark: #490985;
-$color_primary-light: #8f27f1;
+$color_background: $color_tan-1;
+$color_primary: $color_dark-gray;
 $color_text: $color_black;
 
 // Spacing
