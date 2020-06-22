@@ -14,7 +14,8 @@ $_primary-btn-size: 4.5rem;
     color: $color_white;
     &:focus,
     &:hover {
-        background-color: $color_primary-dark;
+        background-color: $color_primary;
+        opacity: 0.8;
     }
 }
 
@@ -74,6 +75,6 @@ $_primary-btn-size: 4.5rem;
     }
 
     &:hover {
-        background-color: $color_primary-dark;
+        background-color: $color_primary;
     }
 }
