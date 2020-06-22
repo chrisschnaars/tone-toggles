@@ -20,7 +20,7 @@
     background-color: $color_tan-2;
     border: 2px solid $color_tan-4;
     border-radius: 8px;
-    color: $color_dark-gray;
+    color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
@@ -33,6 +33,7 @@
     &:focus,
     &:hover {
         background-color: $color_tan-3;
+        color: rgba(0, 0, 0, 0.9);
         cursor: pointer;
         outline: none;
         transform: scale(0.99);
