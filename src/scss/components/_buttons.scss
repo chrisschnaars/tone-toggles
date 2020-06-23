@@ -61,6 +61,11 @@ $_primary-btn-size: 4.5rem;
         border-radius: 0 $border-radius_btn $border-radius_btn 0;
     }
 
+    &:hover,
+    &:focus {
+        box-shadow: none;
+    }
+
     &:focus {
         z-index: 1;
     }

@@ -1,12 +1,11 @@
 a {
-    border-bottom: 2px solid $color_medium-gray;
     color: $color_black;
-    text-decoration: none;
+    text-decoration: 1px solid $color_medium-gray;
     transition: all $transition-duration-base $transition-timing-base;
 
     &:focus,
     &:hover {
-        border-color: $color-white;
         opacity: 0.85;
+        text-decoration: none;
     }
 }
