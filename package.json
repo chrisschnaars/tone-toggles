@@ -13,7 +13,7 @@
     "url": "https://github.com/chrisschnaars/tone-toggles-sequencer"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.0",
+    "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.1.0",
     "cssnano": "^5.0.2",
     "eslint": "^7.26.0",
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html ‑‑no‑source-maps --no-minify --no-cache --public-url ./",
+    "build": "parcel build src/index.html ‑‑no‑source-maps --no-cache --no-minify --public-url ./",
     "test": "open http://localhost:1234"
   }
 }
