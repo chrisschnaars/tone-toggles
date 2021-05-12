@@ -3,6 +3,8 @@
 notes.txt
 
 # Build Files #
+/prod
+/dist
 .sass-cache
 
 # Dependencies #
