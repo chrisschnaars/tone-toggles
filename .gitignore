@@ -3,6 +3,7 @@
 notes.txt
 
 # Build Files #
+/dist
 .parcel-cache
 .sass-cache
 

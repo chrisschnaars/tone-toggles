@@ -39,7 +39,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html --no-cache --public-url ./",
+    "build": "parcel build src/index.html --no-cache --public-url ./tone-toggles --dist-dir prod",
     "test": "open http://localhost:1234"
   }
 }
