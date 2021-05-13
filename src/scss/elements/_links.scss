@@ -1,11 +1,14 @@
 a {
     color: $color_black;
-    text-decoration: 1px solid $color_medium-gray;
     transition: all $transition-duration-base $transition-timing-base;
 
-    &:focus,
     &:hover {
-        opacity: 0.85;
         text-decoration: none;
+    }
+
+    &:focus {
+      outline: $color_primary solid;
+      outline-offset: 1px;
+      text-decoration: none;
     }
 }

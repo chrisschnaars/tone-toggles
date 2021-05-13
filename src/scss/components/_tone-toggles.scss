@@ -30,13 +30,17 @@
     transition: all $transition-duration-base $transition-timing-base;
     width: 100%;
 
-    &:focus,
     &:hover {
         background-color: $color_tan-3;
         color: rgba(0, 0, 0, 0.9);
         cursor: pointer;
         outline: none;
         transform: scale(0.99);
+    }
+
+    &:focus-visible {
+      outline: $color_primary 3px solid;
+      outline-offset: 4px;
     }
 
     &:active {

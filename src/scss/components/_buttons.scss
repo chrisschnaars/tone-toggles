@@ -12,7 +12,7 @@ $_primary-btn-size: 4.5rem;
 .btn--primary {
     background-color: $color_primary;
     color: $color_white;
-    &:focus,
+
     &:hover {
         background-color: $color_primary;
         opacity: 0.8;
